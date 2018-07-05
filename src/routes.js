@@ -1,16 +1,16 @@
 import React from 'react';
-import { Switch, Routes } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import ClassList from './components/ClassList/ClassList';
 import Student from './components/Student/Student'
 
 
-export default routes(
+export default (
     <Switch>
-        <Routes components={Home} exact path='/' />
-        <Routes components={About} path='/About' />
-        <Routes components={ClassList} path='/classlist/:class' />
-        <Routes components={Studnet} path='./student/:id' />
+        <Route component={Home} exact path='/' />
+        <Route component={About} path='/About' />
+        <Route component={ClassList} path='/classlist/:class' />
+        <Route component={Student} path='/student/:id' />
     </Switch>
 )
